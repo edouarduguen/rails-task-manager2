@@ -1,0 +1,15 @@
+<h1><%= @task.title %></h1>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+    <p> <%= @task.details %> </p>
+    <% if @task.completed %>
+      <i class="far fa-check-square"></i>
+      <p>This task is completed!</p>
+    <% else %>
+      <i class="far fa-square"></i>
+      <p>This task is not completed!</p>
+    <% end %>
+  </li>
+</ul>
+<%= link_to "Back to list", tasks_path, class: "btn btn-primary"%>
+<%= link_to "Edit this task", edit_restaurant_path, class: "btn btn-success"  %>
